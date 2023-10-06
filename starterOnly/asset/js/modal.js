@@ -7,27 +7,23 @@ function editNav() {
   }
 }
 
-// close modal function
-function closeModal() {
-  modalbg.style.display = "none";
-}
-
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const modalBtnClose = document.querySelector(".close");
 const formData = document.querySelectorAll(".formData");
-const closeModalBtn = document.querySelector(".close");
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// close modal event
-closeModalBtn.addEventListener("click", closeModal);
 
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
 
+modalBtnClose.addEventListener("click", function () {          
+    modalbg.style.display = "none";                            
+});
 
 
