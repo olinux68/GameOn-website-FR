@@ -106,8 +106,8 @@ function validBirthdate(input) {
 
 // Fonction de validation pour le nombre de tournois
 function validQuantity(input) {
-  if (input.value === "0" || input.value < 0) {
-    quantityText.innerHTML = "Merci d'indiquer le nombre de tournois";
+  if (input.value === "0" || input.value < 0 || input.value > 50) {
+    quantityText.innerHTML = "Merci d'indiquer le nombre de tournois valide";
     quantityText.classList.add('text-danger');
     return false;
   } else {
@@ -169,10 +169,12 @@ document.getElementById("btnSubmit").addEventListener("click", function (e) {
     validLocationTournament() &&
     validCondition(condition)
   ) {
-    // Cacher le formulaire dans le modal
-    formData.forEach((el) => el.style.display = "none");
+    // Vider le contenu du modal
+    while (modalbg.firstChild) {
+      modalbg.removeChild(modalbg.firstChild);
+    }
 
-    // Afficher le message de remerciement dans le modal
+    // Créer et ajouter le message de remerciement
     let thankYouMessage = document.createElement("div");
     thankYouMessage.innerHTML = "<h2>Merci pour votre inscription !</h2>";
     modalbg.appendChild(thankYouMessage);
