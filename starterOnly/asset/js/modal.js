@@ -158,6 +158,12 @@ document.querySelector(".close").addEventListener("click", function () {
 });
 
 // Événement pour la validation finale du formulaire
+
+function openRemerciments() {
+  document.getElementById("form").style.display = "none"; // Masque le formulaire
+  document.getElementById("validForm").style.display = "block"; // Affiche le message de remerciement
+};
+
 document.getElementById("btnSubmit").addEventListener("click", function (e) {
   e.preventDefault();
   if (
@@ -169,16 +175,16 @@ document.getElementById("btnSubmit").addEventListener("click", function (e) {
     validLocationTournament() &&
     validCondition(condition)
   ) {
-    // Vider le contenu du modal
-    while (modalbg.firstChild) {
-      modalbg.removeChild(modalbg.firstChild);
-    }
-
-    // Créer et ajouter le message de remerciement
-    let thankYouMessage = document.createElement("div");
-    thankYouMessage.innerHTML = "<h2>Merci pour votre inscription !</h2>";
-    modalbg.appendChild(thankYouMessage);
+    openRemerciments(); // Si toutes les validations sont correctes, ouvre le message de remerciement
   } else {
-    alert("Merci de remplir correctement votre inscription.");
+    alert("Merci de remplir correctement votre inscription."); // Sinon, alerte l'utilisateur
   }
 });
+
+const btnValid = document.getElementById("btnValid");
+if (btnValid) { // Vérification pour éviter des erreurs si le bouton n'est pas présent
+  btnValid.addEventListener("click", function () {
+    window.location.reload(); // Recharge la page
+  });
+}
+
