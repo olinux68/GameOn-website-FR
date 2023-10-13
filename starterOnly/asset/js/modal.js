@@ -21,8 +21,12 @@ const birthdate = document.getElementById("birthdate");
 const quantity = document.getElementById("quantity");
 const locationTournament = document.getElementsByName("location");
 const condition = document.getElementById("checkbox1");
+const btnSubmit = document.getElementById("btnSubmit");
+const btnValid = document.getElementById("btnValid");
+const validForm = document.querySelector(".validationForm");
+const validMessage = document.getElementById("validMessage");
 
-// Éléments pour les messages de validation
+// Éléments de validation
 const firstText = document.getElementById("firstText");
 const lastText = document.getElementById("lastText");
 const emailText = document.getElementById("emailText");
@@ -158,14 +162,16 @@ document.querySelector(".close").addEventListener("click", function () {
 });
 
 // Événement pour la validation finale du formulaire
-
 function openRemerciments() {
+  console.log("La fonction openRemerciments() est appelée."); // Vérifiez si cette ligne est affichée dans la console
   document.getElementById("form").style.display = "none"; // Masque le formulaire
-  document.getElementById("validForm").style.display = "block"; // Affiche le message de remerciement
-};
+  validForm.style.display = "block";
+  validMessage.innerHTML = "Merci pour votre inscription";
+}
 
 document.getElementById("btnSubmit").addEventListener("click", function (e) {
   e.preventDefault();
+
   if (
     generiqueValidate(first, regExTypeText, "Prénom invalide", firstText, first) &&
     generiqueValidate(last, regExTypeText, "Nom invalide", lastText, last) &&
@@ -181,10 +187,12 @@ document.getElementById("btnSubmit").addEventListener("click", function (e) {
   }
 });
 
-const btnValid = document.getElementById("btnValid");
-if (btnValid) { // Vérification pour éviter des erreurs si le bouton n'est pas présent
+
+if (btnValid) {
   btnValid.addEventListener("click", function () {
     window.location.reload(); // Recharge la page
   });
 }
+
+
 

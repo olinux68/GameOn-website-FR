@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css?family=DM+Sans"
       rel="stylesheet"
     />
-    <script src="asset/js/modal.js" defer></script>
+    
   </head>
 
   <body>
@@ -219,7 +219,7 @@
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2"
                   ><span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br />
               </div>
@@ -230,12 +230,15 @@
                 type="submit"
                 value="C'est parti"
               />
-            </form><div id="validForm" style="display:none;">
-              <p>Merci pour votre inscription !</p>
-          </div>
+            </form>
+            <div class="validationForm">
+              <p id="validMessage"></p>
+              <input id="btnValid" class="button btn-submit" type="button"  value="Fermer"/>
+            </div>
 
             </div>
           </div>
+          
         </div>
       </div>
     </main>
@@ -243,5 +246,6 @@
     <footer>
       <p class="copyrights">Copyright 2014 - 2023, GameOn Inc.</p>
     </footer>
+    <script src="asset/js/modal.js" ></script>
   </body>
 </html>

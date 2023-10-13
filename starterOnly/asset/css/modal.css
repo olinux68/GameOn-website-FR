@@ -3,13 +3,13 @@
   --font-slab: var(--font-default);
   --modal-duration: 0.8s;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Landing Page */
 body {
   margin: 0;
   display: flex;
@@ -20,23 +20,29 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
+
 p {
   margin-bottom: 0;
   padding: 0.5vw;
 }
+
 img {
   padding-right: 1rem;
 }
+
 .topnav {
   overflow: hidden;
   margin: 3.5%;
 }
+
 .header-logo {
   float: left;
 }
+
 .main-navbar {
   float: right;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -48,19 +54,23 @@ img {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
+
 .topnav a:hover {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
 }
+
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
 }
+
 .topnav .icon {
   display: none;
 }
+
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -72,6 +82,7 @@ main {
   border-radius: 2rem;
   text-align: justify;
 }
+
 .modal-btn {
   font-size: 145%;
   background: #df5707;
@@ -83,16 +94,17 @@ main {
   border-radius: 1rem;
   cursor: pointer;
 }
+
 .modal-btn:hover {
   background: #3876ac;
 }
+
 .footer {
   margin: 20px;
   padding: 10px;
   font-family: var(--font-slab);
 }
 
-/* Modal form */
 .button {
   background: #fe7214;
   margin-top: 0.5em;
@@ -102,13 +114,17 @@ main {
   cursor: pointer;
   font-size: 16px;
 }
+
 .button:hover {
   background: #3876ac;
 }
+
 .smFont {
   font-size: 16px;
 }
+
 .bground {
+  position: relative;
   display: none;
   position: fixed;
   z-index: 1;
@@ -119,6 +135,7 @@ main {
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
+
 .content {
   margin: auto;
   width: 100%;
@@ -127,16 +144,18 @@ main {
   animation-duration: var(--modal-duration);
   background: #232323;
   border-radius: 10px;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   top: 30px;
   color: #fff;
   padding-top: 10px;
 }
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
+
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -144,11 +163,13 @@ label {
   display: inline-block;
   margin: 10px auto 7px;
 }
+
 input {
   padding: 8px;
   border: 0.8px solid #ccc;
   outline: none;
 }
+
 .text-control {
   margin: 0;
   padding: 8px;
@@ -157,6 +178,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
+
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -169,12 +191,15 @@ input {
   opacity: 0;
   transition: 0.3s;
 }
+
 .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
+
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -182,6 +207,7 @@ input {
   font-size: 12px;
   font-weight: normal;
 }
+
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
   display: block;
@@ -196,6 +222,7 @@ input {
   top: -1px;
   transition: 0.3s;
 }
+
 .checkbox-label .checkbox-icon::after,
 .checkbox2-label .checkbox-icon::after {
   content: "";
@@ -212,21 +239,26 @@ input {
   transition: 0.3s;
   opacity: 0;
 }
+
 .checkbox-input {
   display: none;
 }
+
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
   opacity: 1;
 }
+
 .checkbox-input:checked + .checkbox2-label .checkbox-icon {
   background: #279e7a;
 }
+
 .checkbox2-label .checkbox-icon {
   border-radius: 4px;
   border: 0;
   background: #c4c4c4;
 }
+
 .checkbox2-label .checkbox-icon::after {
   width: 7px;
   height: 4px;
@@ -239,6 +271,7 @@ input {
   left: 21%;
   top: 19%;
 }
+
 .close {
   position: absolute;
   right: 15px;
@@ -249,6 +282,7 @@ input {
   cursor: pointer;
   transform: scale(0.7);
 }
+
 .close:before,
 .close:after {
   position: absolute;
@@ -258,12 +292,15 @@ input {
   width: 3px;
   background-color: #fff;
 }
+
 .close:before {
   transform: rotate(45deg);
 }
+
 .close:after {
   transform: rotate(-45deg);
 }
+
 .btn-submit,
 .btn-signup {
   background: #fe1814;
@@ -277,21 +314,21 @@ input {
   border: 0;
 }
 
-/* custom select styles */
 .custom-select {
   position: relative;
   font-family: Arial;
   font-size: 1.1rem;
   font-weight: normal;
 }
+
 .custom-select select {
   display: none;
 }
+
 .select-selected {
   background-color: #fff;
 }
 
-/* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
   content: "";
@@ -306,7 +343,6 @@ input {
   border-radius: 5px 0 5px 0;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   transform: rotate(135deg);
   top: 13px;
@@ -323,7 +359,6 @@ input {
   height: 48px;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: #fff;
@@ -333,20 +368,21 @@ input {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
+
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* custom select end */
+
 .text-label {
   font-weight: normal;
   font-size: 16px;
   margin-top: 10px;
 }
+
 .hero-section {
   border-radius: 10px;
   display: grid;
@@ -355,6 +391,7 @@ input {
   box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
+
 .hero-content {
   padding: 51px 67px;
   grid-column: span 4;
@@ -364,6 +401,7 @@ input {
   text-align: left;
   min-width: 400px;
 }
+
 .hero-content::after {
   content: "";
   width: 100%;
@@ -373,21 +411,25 @@ input {
   right: -80px;
   top: 0;
 }
+
 .hero-content > * {
   position: relative;
   z-index: 1;
 }
+
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
 }
+
 .hero-text {
   width: 146%;
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
 }
+
 .btn-signup {
   outline: none;
   font-size: 1.3rem;
@@ -395,9 +437,11 @@ input {
   margin: 0;
   margin-top: 59px;
 }
+
 .hero-img {
   grid-column: span 8;
 }
+
 .hero-img img {
   width: 100%;
   height: 100%;
@@ -405,6 +449,7 @@ input {
   padding: 0;
   object-fit: cover;
 }
+
 .copyrights {
   color: #fe142f;
   padding: 0;
@@ -412,66 +457,80 @@ input {
   margin: 60px 0 30px;
   font-weight: bolder;
 }
+
 .hero-section > .btn-signup {
   display: none;
 }
+
 footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px;
 }
 
-/* Text champs formulaire */
-
-.text-danger, .text-succes  {
+.text-danger,
+.text-succes {
   font-size: 12px;
   margin-top: 7px;
 }
+
 .text-danger {
   color: #fe142f;
 }
+
 .text-succes {
   color: #279e7a;
 }
- .border-danger {
-  border: 2px solid #fe142f;
- }
- .border-succes {
-  border: 2px solid #279e7a;
- }
 
-/*Validation du formulaire*/
+.border-danger {
+  border: 2px solid #fe142f;
+}
+
+.border-succes {
+  border: 2px solid #279e7a;
+}
+
 .validationForm {
   display: none;
   text-align: center;
   flex-direction: column;
   height: 65vh;
 }
-.validationForm #validMessage{
+
+.validationForm #validMessage {
   margin: auto;
 }
 
-/* Responsive */
 @media screen and (max-width: 1100px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-  .topnav a {display: none;}
+
+  .topnav a {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
   }
+
   .header-logo img {
     width: 150px;
   }
+
   .hero-headline {
     font-size: 2.5rem;
     white-space: normal;
@@ -482,45 +541,56 @@ footer {
   body {
     padding: 30px;
   }
+
   main {
     padding: 0;
     margin: 0;
   }
+
   .bground {
     overflow: auto;
   }
+
   .topnav {
     margin: 0;
   }
+
   .hero-section {
     display: block;
     box-shadow: unset;
   }
+
   .hero-content {
     background: #fff;
     color: #000;
     padding: 0;
   }
+
   .hero-content::after {
     content: unset;
   }
+
   .hero-content .btn-signup {
     display: none;
   }
+
   .hero-text {
     width: unset;
     font-size: 0.85rem;
     margin-top: 20px;
   }
+
   .hero-img img {
     border-radius: 10px;
     margin-top: 40px;
   }
+
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
   }
+
   .copyrights {
     margin-top: 50px;
     text-align: center;
@@ -528,18 +598,22 @@ footer {
 }
 
 @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
+
   .hero-content {
     width: 100%;
     min-width: 0px;
     padding: 0;
   }
-} 
+}
 
 @keyframes modalopen {
   from {
@@ -551,3 +625,45 @@ footer {
   }
 }
 
+#validForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#validForm h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+/*Validation du formulaire*/
+.validationForm {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  height: 65vh;
+}
+
+#validForm button {
+  background-color: #fe142f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#validForm button:hover {
+  background-color: #df130d;
+}
