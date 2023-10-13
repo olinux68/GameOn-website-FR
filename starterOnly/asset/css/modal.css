@@ -653,6 +653,9 @@ footer {
   flex-direction: column;
   height: 65vh;
 }
+.validationForm #validMessage {
+  margin: auto;
+}
 
 #validForm button {
   background-color: #fe142f;

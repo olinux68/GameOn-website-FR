@@ -165,7 +165,7 @@ document.querySelector(".close").addEventListener("click", function () {
 function openRemerciments() {
   console.log("La fonction openRemerciments() est appelée."); // Vérifiez si cette ligne est affichée dans la console
   document.getElementById("form").style.display = "none"; // Masque le formulaire
-  validForm.style.display = "block";
+  validForm.style.display = "flex";
   validMessage.innerHTML = "Merci pour votre inscription";
 }
 
